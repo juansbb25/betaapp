@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import MyWorld from "./components/World";
+import Navbar from "./components/Navbar";
+import React from "react";
+import MyCanvas from "./components/MyCanvas";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="flex flex-col bg-pink-200 h-screen w-full relative">
+        <div className="p-2">
+          <Navbar />
+        </div>
+
+        <div className="flex flex-1 h-full">
+          <MyCanvas />
+        </div>
+      </div>
     </div>
   );
 }
