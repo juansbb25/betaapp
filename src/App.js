@@ -5,7 +5,7 @@ import MyCanvas from "./components/MyCanvas";
 function App() {
   return (
     <div>
-      <div className="flex flex-col bg-pink-200 h-screen w-full relative">
+      <div style={{backgroundColor:"#171720"}} className="flex flex-col h-screen w-full relative">
         <div className="p-2">
           <Navbar />
         </div>

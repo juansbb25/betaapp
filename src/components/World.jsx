@@ -8,7 +8,7 @@ const MyPlane = ({ color, ...props }) => {
 
   return (
     <Plane args={[1000, 1000]} ref={ref} receiveShadow={true}>
-      <meshPhysicalMaterial color={color} />
+      <meshStandardMaterial attach="material" color="#171720" />
     </Plane>
   );
 };
@@ -44,17 +44,17 @@ function PhyBox(props) {
     </Box>
   );
 }
+
 const World = () => {
   const { eventBalls } = useSelector((state) => state.events);
   return (
-    <Physics gravity={[0, -10, 0]}>
+    <Physics gravity={[0, -15, 0]}>
       <MyPlane
-        color={"#c41c5f"}
         position={[0, -2, 0]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
-      <PhyBox position={[0, 10, -5]} />
-      {eventBalls && <Balls number={1} />}
+      <PhyBox position={[0, 10, 0]} />
+      {eventBalls && <Balls number={200} />}
     </Physics>
   );
 };
